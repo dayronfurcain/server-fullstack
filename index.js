@@ -4,7 +4,7 @@ require('dotenv').config()
 
 const Note = require('./models/note')
 
-let notes = []
+// const notes = []
 
 app.use(express.static('dist'))
 
@@ -42,7 +42,7 @@ app.post('/api/notes', (request, response, next) => {
 
   const note = new Note({
     content: body.content,
-    important: body.important || false,
+    important: body.important || false
   })
 
   note
@@ -80,7 +80,7 @@ app.put('/api/notes/:id', (request, response, next) => {
     request.params.id,
 
     { content, important },
-    { new: true, runValidators: true, context: 'query' },
+    { new: true, runValidators: true, context: 'query' }
   )
     .then((updatedNote) => {
       response.json(updatedNote)
