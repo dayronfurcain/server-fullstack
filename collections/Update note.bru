@@ -1,0 +1,18 @@
+meta {
+  name: Update note
+  type: http
+  seq: 6
+}
+
+put {
+  url: http://localhost:3001/api/notes/6617ee9c20439bdce8960301
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "content": "Bruno is good in testing backend",
+    "important": true
+  }
+}
