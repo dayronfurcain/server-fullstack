@@ -1,0 +1,22 @@
+meta {
+  name: Post note
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3001/api/notes/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxIiwiaWQiOiI2NjI0MmRmZTdiZGRmMTMwNzMxM2FlZmIiLCJpYXQiOjE3MTM2NTAwMzZ9.GkTjfnxOoCtlRroSwk6dSjurwbaXGbceAo0UqgQAewg
+}
+
+body:json {
+  {
+    "content": "SPA use token based in Auth",
+    "important": false
+  }
+}
